@@ -1,1 +1,166 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
+body {
+    background: #080808;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    height: 80px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #222;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #999;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    padding: 80px 8%;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.95),
+            rgba(0,0,0,.55),
+            rgba(0,0,0,.2)
+        ),
+        url("hero.jpg") center/cover;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.eyebrow {
+    font-size: 13px;
+    letter-spacing: 4px;
+    color: #aaa;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: clamp(55px, 9vw, 110px);
+    line-height: .9;
+    font-weight: 900;
+}
+
+h1 span {
+    color: #aaa;
+}
+
+.hero-content > p:not(.eyebrow) {
+    margin-top: 30px;
+    max-width: 500px;
+    color: #ccc;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+    flex-wrap: wrap;
+}
+
+.button {
+    padding: 16px 25px;
+    text-decoration: none;
+    font-weight: 800;
+    display: inline-block;
+}
+
+.primary {
+    background: white;
+    color: black;
+}
+
+.secondary {
+    border: 1px solid #555;
+    color: white;
+}
+
+.about {
+    padding: 100px 8%;
+    max-width: 900px;
+}
+
+.about h2 {
+    font-size: 60px;
+    line-height: .95;
+    margin-bottom: 25px;
+}
+
+.about p:last-child {
+    color: #aaa;
+    line-height: 1.7;
+}
+
+footer {
+    border-top: 1px solid #222;
+    padding: 30px 6%;
+    display: flex;
+    justify-content: space-between;
+    color: #777;
+}
+
+footer a {
+    color: #777;
+}
+
+@media(max-width:700px) {
+
+    header {
+        padding: 0 20px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .hero {
+        padding: 60px 25px;
+    }
+
+    .about {
+        padding: 70px 25px;
+    }
+
+    .about h2 {
+        font-size: 45px;
+    }
+}
